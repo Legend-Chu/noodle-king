@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/type/type",
+    "pages/me/me",
+    "pages/index/typeDetail/typeDetail",
+    "pages/index/search/search",
+    "pages/order/order",
+    "pages/me/myOrders/myOrders",
+    "pages/me/feedback/feedback"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "面点王长者食堂",
+    "navigationBarBackgroundColor": "#d0a36b"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {},
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#bfbfbf",
+    "selectedColor": "#d0a36b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/未选中首页.png",
+        "selectedIconPath": "/images/选中首页.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/未选中我的.png",
+        "selectedIconPath": "/images/选中我的.png"
+      }
+    ]
+  }
+}

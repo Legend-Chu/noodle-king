@@ -1,0 +1,75 @@
+/* pages/type/type.wxss */
+.type-box{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.type-left{
+  width: 300rpx;
+  background-color: rgb(235, 233, 232);
+  margin-right: 20rpx;
+}
+.type-left view{
+  font-size: 37rpx;
+  padding: 20rpx 0;
+  text-align: center;
+}
+.type-right{
+  margin-top: 10rpx;
+}
+.type-good-box{
+  display: flex;
+  padding: 20rpx 0;
+}
+.type-good-img{
+  width: 250rpx;
+  height: 250rpx;
+  overflow: hidden;
+}
+.choose-num-box{
+  display: flex;
+  font-size: 40rpx;
+  text-align: center;
+}
+.choose-num-box view{
+  width: 60rpx;
+}
+.choose-num-box image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.type-good-description{
+  height: 200rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.type-good-title{
+  font-size: 45rpx;
+}
+.type-good-num{
+  color: #a7a5a5;
+}
+.type-good-price{
+  color: red;
+  font-size: 45rpx;
+}
+.type-good-description .choose-num{
+  margin:-5rpx 0 0 0;
+}
+/* 选中分类时的样式 */
+.choose-type{
+  background-color: #ffffff;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 未选中分类时的样式 */
+.unchoose-type{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

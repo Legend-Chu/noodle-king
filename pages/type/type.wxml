@@ -1,0 +1,27 @@
+<!--pages/type/type.wxml-->
+<view class="type-box">
+  <!-- 左半部分 -->
+  <scroll-view scroll-y="true" class="type-left">
+    <block wx:for="{{dishesVerity}}" wx:key="item">
+      <view 
+      bindtap="getTypeGoodList" 
+      data-id="{{item._id}}" 
+      data-index="{{index}}" 
+      class="{{currentType==index?'choose-type':'unchoose-type'}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <!-- 右半部分 -->
+  <scroll-view scroll-y="true" class="type-right">
+    <block wx:for="{{goodList}}" wx:key="item">
+      <view class="type-good-box" bindtap="toGoodDetail" data-id="{{item._id}}">
+        <image src="{{item.cover}}" mode="" class="type-good-img"/>
+        <view class="type-good-description">
+          <view class="type-good-title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="type-good-price">{{item.price}}元</view>
+        </view>
+      </view>
+    </block>  
+  </scroll-view>
+</view>

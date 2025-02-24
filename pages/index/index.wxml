@@ -1,0 +1,83 @@
+<view class="location">
+  <view class="location-left">面点王深圳桃园店</view>
+  <view class="distance">距离您8.1km</view>
+</view>
+
+
+<view class="type-box">
+  <!-- 左半部分 -->
+  <scroll-view scroll-y="true" class="type-left">
+    <block wx:for="{{dishesVerity}}" wx:key="item">
+      <view 
+      bindtap="getTypeGoodList" 
+      data-id="{{item._id}}" 
+      data-index="{{index}}" 
+      class="{{currentType==index?'choose-type':'unchoose-type'}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <!-- 右半部分 -->
+  <view  class="type-right">
+    <block wx:for="{{goodList}}" wx:key="item">
+      <view bindtap="addCart" class="type-good-box" data-id="{{item._id}}">
+          <image src="{{item.cover}}" mode="" class="type-good-img"/>
+          <view class="type-good-description">
+            <view class="type-good-title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="good-price-box">
+              <view class="type-good-price">{{item.price}}元</view>
+              <view class="type-good-price-disc">/份</view>
+              <image class="addToCart" src="../../images/加入购物车.png" mode=""/>
+            </view>  
+          </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 底部结算 -->
+<view class="all-bottom-box">
+  <view class="all-bottom-left" bindtap="allChoose"></view>
+  
+  <view class="showCartBox" bindtap="clickme">
+      <image class="showCart" src="../../images/购物袋_shopping_bg.png" mode=""/>
+      <view class="showCartContent">购物袋</view>
+  </view>
+  <view class="all-bottom-right">
+    <view class="total-price-text">合计:</view>
+    <view class="total-price">{{sum}}元</view>
+    <view class="total-button" bindtap="toOrder">结算</view>
+  </view>
+</view>
+
+
+<!-- 点击显示买了哪些餐 -->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class="bottomList">
+    <block wx:for="{{cartsList}}" wx:key="item">
+      <view class="good-box">
+          <view class="good-title">{{item.title}}</view>
+          <view class="good-price">{{item.price}}元</view>
+          <view class="choose-num-box">
+            <image catchtap="reduce" data-index="{{index}}" src="../../images/减.png" mode=""/>
+            <view class="choose-num">{{item.number}}</view>
+            <image catchtap="add" data-index="{{index}}" src="../../images/加号.png" mode=""/>
+          </view> 
+      </view>
+    </block>
+  </view>
+    <!-- 底部结算 -->
+    <view class="all-bottom-box-show">
+     <view class="showCartBox" bindtap="clickme"></view>
+    <view class="all-bottom-right">
+      <view class="total-price-text">合计:</view>
+      <view class="total-price">{{sum}}元丨</view>
+      <view class="total-button" bindtap="toOrder">结算</view>
+    </view>
+  </view>
+</view>
+
+  

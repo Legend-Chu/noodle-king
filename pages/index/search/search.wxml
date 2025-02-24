@@ -1,0 +1,20 @@
+<!--pages/index/search/search.wxml-->
+<!--搜索框-->
+<view class="search-wrap">
+  <view class="search-box">
+    <input bindinput="getValue" type="text" focus='true' bindconfirm="search" placeholder="请输入商品关键词" class="input-cell"/>
+    <image class="search-image" src="/images/搜索.png" bindtap="search" mode=""/>
+  </view>
+</view>
+<!-- 搜索出来的菜品列表 -->
+<block wx:for="{{goodList}}" wx:key="item">
+  <view class="good-box" bindtap="toGoodDetail" data-id="{{item._id}}">
+    <image class="good-img" src="{{item.cover}}" mode=""/>
+      <view class="right">
+        <view class="box-left">
+          <view class="title">{{item.title}}</view>
+          <view class="soldMount">销量80</view>
+        </view>
+    <view class="price">{{item.price}}元</view></view>
+  </view>   
+</block>

@@ -1,0 +1,33 @@
+<!--pages/goodDetail/goodDetail.wxml-->
+<view>
+  <image src="{{good.cover}}" class="good-cover" mode=""/>
+  <view class="good-price-tag">
+    <view class="good-price">￥{{good.price}}元</view>
+    <view class="good-tag">88人购买</view>
+  </view>
+  <view class="good-title-box">
+    <view class="good-title">{{good.title}}</view>
+    <button open-type="share" class="share-button">分享</button>
+  </view>
+  <view class="good-detail-title">商品详情</view>
+  <view class="good-detail-box">
+    <view class="good-text">{{good.text}}</view>
+    <block wx:for="{{good.images}}" wx:key="item">
+      <image class="good-images" src="{{item}}"></image>
+    </block>
+  </view>
+</view>
+
+<!-- 底部tabbar -->
+<view class="tabbar">
+  <!-- 左半部分 -->
+  <view>
+    <image class="cart-img" src="../../static/购物车-选中.png" mode=""/>
+    <view class="cart-num">{{cartsList.length}}</view>
+  </view>
+  <!-- 右半部分 -->
+  <view class="tabbar-right">
+    <view class="add-cart" bindtap="addCart">加入购物车</view>
+    <view class="buy" bindtap="toOrder">立即购买</view>
+  </view>
+</view>

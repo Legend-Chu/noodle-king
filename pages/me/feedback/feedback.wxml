@@ -1,0 +1,2 @@
+<!--pages/me/feedback/feedback.wxml-->
+<button open-type="feedback">客服反馈</button>

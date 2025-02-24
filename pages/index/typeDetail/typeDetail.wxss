@@ -1,0 +1,45 @@
+/* pages/index/typeDetail/typeDetail.wxss */
+/* 菜品列表 */
+.dishes-box{
+  display: flex;
+  flex-direction: column;
+  margin:40rpx 20rpx 100rpx 20rpx;
+  font-size: 0rpx;
+}
+.dishes-content{
+  background-color: rgb(235, 229, 230);
+  border-radius: 0 0 20rpx 20rpx;
+  padding-bottom: 30rpx;
+  width: 700rpx;
+}
+.dishes-img{
+  width: 700rpx;
+  height: 500rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.dishes-bottom{
+  display: flex;
+  margin: 25rpx 10rpx;
+  justify-content: space-between;
+  font-size: 35rpx;
+  line-height: 150%;
+}
+.dishes-title{
+  margin: 0 10rpx;
+  padding-top: 20rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  /* 文字超出范围，限制文字显示 */
+  width: 700rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.dishes-price{
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20rpx;
+  width: 300rpx;
+  font-size:45rpx;
+}

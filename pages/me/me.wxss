@@ -1,0 +1,50 @@
+/* pages/me/me.wxss */
+.menu-item{
+  text-align: center;
+  padding: 40rpx 0;
+  margin: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+  font-size: 35rpx;
+}
+.face-wrap{
+  text-align: center;
+  margin: 40rpx 0 20rpx 0;
+}
+
+.face-img{
+  text-align: center;
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 50%;
+}
+.but-login{
+  margin: 50rpx 0;
+  color: white;
+  background-color: #000;
+  font-size: 40rpx;
+}
+
+.but-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50rpx 0;
+}
+.but-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.but-wrap image{
+  margin: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.but{
+  font-size: 40rpx;
+  text-align: center;
+}
+.nickName{
+  margin-top: 20rpx;
+  font-size: 40rpx;
+}

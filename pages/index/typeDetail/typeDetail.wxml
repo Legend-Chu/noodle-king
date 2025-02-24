@@ -1,0 +1,16 @@
+<!-- 菜品列表 -->
+<view class="dishes-box">
+  <block wx:for="{{goodList}}" wx:key="item">
+    <view bindtap="toGoodDetail" data-id="{{item._id}}">
+      <image class="dishes-img" src="{{item.cover}}" mode=""/>
+      <view class="dishes-content">
+        <view class="dishes-title">{{item.title}}</view>
+        <view class="dishes-bottom">
+          <view>{{item.text}}</view>
+          <view class="dishes-price">{{item.price}}元</view>
+        </view>
+      </view>
+      <view style="height: 100rpx;"></view>
+    </view>
+  </block>
+</view>

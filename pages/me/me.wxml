@@ -1,0 +1,34 @@
+<!--pages/me/me.wxml-->
+<view class="face-wrap">
+  <image class="face-img" wx:if="{{!userInfo}}" src="/images/我的1.png" mode=""/>
+  <image class="face-img" wx:if="{{userInfo}}" src="{{userInfo.avatarUrl}}" mode=""/>
+  <view class="nickName">{{userInfo.nickName}}</view>
+</view>
+<button class="but-login" bindtap="login" wx:if="{{!userInfo}}">登录</button>
+
+<view class="but-row" wx:if="{{userInfo}}">
+  <navigator url="/pages/me/myOrders/myOrders?status=-1" class="but-wrap">
+    <image src="/images/钱包.png" mode=""/>
+    <view class="but">待支付</view>
+  </navigator>
+  <navigator url="/pages/me/myOrders/myOrders?status=0"  class="but-wrap">
+    <image src="/images/厨师.png" mode=""/>
+    <view class="but">备餐中</view>
+  </navigator>
+  <navigator url="/pages/me/myOrders/myOrders?status=1" class="but-wrap">
+    <image src="/images/8.食品饮料.png" mode=""/>
+    <view class="but">待取餐</view>
+  </navigator>
+  <navigator url="/pages/me/myOrders/myOrders?status=2" class="but-wrap">
+    <image src="/images/工作完成.png" mode=""/>
+    <view class="but">已完成</view>
+  </navigator>
+</view>
+
+
+
+
+
+<view class="menu-item" bindtap="toFeedback">在线客服</view>
+<view class="menu-item" bindtap="toFeedback">意见反馈</view>
+<view class="menu-item" bindtap="logout" wx:if="{{userInfo}}">退出登录</view>

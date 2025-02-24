@@ -1,0 +1,77 @@
+/* pages/me/myOrders/myOrders.wxss */
+.menu{
+  display: flex;
+  flex-direction: row;
+  margin:  20rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+}
+.menu-wrap{
+  line-height: 75rpx;
+  font-size: 33rpx;
+  width: 25%;
+  text-align: center;
+}
+.orderBox{
+  margin: 20rpx;
+}
+.image{
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.good-wrap{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+.good-bottom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.title{
+  width: 400rpx;
+}
+
+.good-right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.good-creatTime{
+  margin: 20rpx;
+}
+.orderList{
+  margin-bottom: 100rpx;
+}
+
+.choose-type{
+  border-bottom: 5rpx solid #ff6146;
+}
+.orderBox{
+  border:solid 3rpx rgb(202, 202, 202);
+  border-radius: 20rpx;
+}
+.time{
+  margin: 20rpx;
+}
+.total-money{
+  margin: 30rpx;
+  text-align: end;
+  font-size: 35rpx;
+}
+.red{
+  color:red
+}
+.but-wrap{
+  text-align: right;
+}
+.payButton{
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
